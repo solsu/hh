@@ -400,14 +400,15 @@ h6{
 	height: 339px;
 	background: #fafafa;
 	margin-right: 14px;
+	transition: all 0.5s;
 }
 .list:first-child{
 	border-top: 1px solid #ffac13;
 }
-.list:nth-child(2){
+.list:nth-child(even){
 	border-top: 1px solid #83c44e;
 }
-.list:nth-child(3){
+.list:nth-child(odd){
 	border-top: 1px solid #2196f3;
 }
 .list:nth-child(4){
@@ -429,6 +430,7 @@ h6{
 	text-align: center;
 	line-height: 34px;
 	font-size: 12px;
+	color:black;
 }
 .neirong p:nth-child(3){
 	display: block;
@@ -458,7 +460,7 @@ color: rgb(200, 200, 200)
 .shanglan{
 	width: 1226px;
 	height: 60px;
-	
+
 }
 .ming{
 	
@@ -471,7 +473,7 @@ color: rgb(200, 200, 200)
 	float: left;
 }
 .shanglan a{
-
+display: inline-block;
 	/* height: 46px; */
 	float: right;
 margin-right: 20px;
@@ -480,16 +482,16 @@ padding-bottom: 4px;
 margin-top: 19px;
 color: black;
 font-size: 14px;
-border-bottom: 1px solid rgb(250, 250, 250);
+/*border-bottom: 1px solid rgb(250, 250, 250);*/
 }
-.shanglan a:hover{
-	color: rgb(250, 0, 0);
-	border-bottom: 1px solid rgb(250, 0, 0);
-}
-#active{
+/*.shanglan a:hover{*/
+	/*color: rgb(250, 0, 0);*/
+	/*border-bottom: 1px solid rgb(250, 0, 0);*/
+/*}*/
+/*#active{*/
 
-border-bottom: 1px solid rgb(250, 0, 0);
-}
+/*border-bottom: 1px solid rgb(250, 0, 0);*/
+/*}*/
 .banner{
 	height: 460px;
 	width: 1226px;
@@ -619,7 +621,7 @@ right: 0;
 	background: url('../img/anniu.png') -83px center;
 }
 .anniuzz{
-	display: block;
+	display: none;
 	width: 41px;
 	height: 69px;
 	position: absolute;
@@ -631,8 +633,11 @@ right: 0;
 	z-index: 20;
 	background: url('../img/anniu.png') -83px center;
 }
-.anniuyy{
+.gezii:hover .anniuyy,.gezii:hover .anniuzz{
 	display: block;
+}
+.anniuyy{
+	display: none;
 	width: 41px;
 	height: 69px;
 	position: absolute;
@@ -741,6 +746,11 @@ right: 0;
 	background:  #ff6700;
 	overflow: hidden;
 	transition: 0.3s;
+	padding-top: 10px;
+}
+.pop{
+	border-bottom: 1px solid #ff6700;
+	color:#ff6700;
 }
 .xiatu1 .xiala{
 	position: absolute;
@@ -751,6 +761,7 @@ right: 0;
 	background:  #ff6700;
 	/* overflow: hidden; */
 	transition: 0.3s;
+	padding-top: 10px;
 }
 .xiatu li:hover {
 	transform: translateY(-1px);
@@ -770,23 +781,29 @@ right: 0;
 	margin-left: 12px;
 	font-size: 12px;
 	color: white;
-
+	margin-left: 30px;
+	text-align: left;
 }
 .xiatu1 li .xiala h6{
 	margin-left: 12px;
 	font-size: 12px;
 	color: white;
-
+	margin-left: 30px;
+	text-align: left;
 }
 .xiatu .xiaotu li .xiala h5{
-	margin-left: 12px;
+	font-weight: normal;
 	font-size: 12px;
-	color: rgba(0, 0, 0, 0.5);
+	color: rgba(255, 255, 255, 0.8);
+	text-align: left;
+	margin-left: 30px;
 }
 .xiatu1 .xiaotu li .xiala h5{
-	margin-left: 12px;
+	font-weight: normal;
+	margin-left: 30px;
 	font-size: 12px;
-	color: rgba(0, 0, 0, 0.5);
+	color: rgba(255, 255, 255, 0.8);
+	text-align: left;
 }
 .xiatu ul li a{
 	display: inline-block;	
@@ -1080,7 +1097,7 @@ color: red;
 .neirongxia .gezii:hover{
 	transform: translateY(-3px);
 	transition: all 0.5s;
-	box-shadow: 0 3px 5px rgba(0, 0, 0, 0.7)
+	box-shadow: 0 1px 20px rgba(0, 0, 0, 0.5);
 }
 .neirongxia .gezii ul{
 	width: 296px;
@@ -1168,6 +1185,7 @@ color: red;
 .changlan{
 	width: 3720px;
 	height: 100%;
+	transition: all 0.5s;
 }
 .yuan div{
 	display: inline-block;

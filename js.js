@@ -52,8 +52,10 @@ window.onload=function(){
 		a[k].onmouseenter=function(){
 			for(let l=0;l<a.length;l++){
 				xiatu[l].style.display="none";
+                a[l].className=""
 			}
 			xiatu[k].style.display="block";
+			a[k].className="pop"
 		}
 	}
 	let banner=document.querySelector(".banner");
@@ -136,11 +138,25 @@ window.onload=function(){
 	let ll=true;
 	console.log(ll)
 	anniuzz.onclick=function(){
-		
+        if(!flag){
+            return;
+        }
+        if (next==0) {
+            next=0;
+            return;
+        }
+        flag=false;
 		actl();
 	}
 	anniuyy.onclick=function(){
-		
+        if(!flag){
+            return;
+        }
+        if (next==lis.length-1) {
+            next=lis.length-1;
+            return;
+        }
+        flag=false;
 		act();
 	}
 	yuan.forEach(function(v,i){
@@ -174,9 +190,10 @@ window.onload=function(){
 		yuan[current].classList.remove("dayuan");
 		yuan[next].classList.add("dayuan");
 		lis[next].style.left=`${width1}px`;
-		animate(lis[current],{left:-width1});
+		animate(lis[current],{left:-width1},function(){flag=true;});
 		animate(lis[next],{left:0},)
 		current=next;
+        flag=true;
 	}
 	function actl(){
 		next--;
@@ -186,10 +203,10 @@ window.onload=function(){
 		yuan[current].classList.remove("dayuan");
 		yuan[next].classList.add("dayuan");
 		lis[next].style.left=`${-width1}px`;
-		animate(lis[current],{left:width1});
-		animate(lis[next],{left:0})
+		animate(lis[current],{left:width1},function(){flag=true;});
+		animate(lis[next],{left:0},)
 		current=next;
-
+        flag=true;
 	}
 	}
 	let gezii=document.getElementsByClassName("gezii")[0];
